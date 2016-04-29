@@ -1,0 +1,22 @@
+block config
+	include config.jade
+
+
+doctype
+html( lang="ko" )
+	head
+		title
+			block title
+				| #{PageTitle}
+		
+		block meta
+			include meta.jade
+		
+		block css
+			include css.jade
+	body
+		block header
+		block main
+		
+		block js
+			include js.jade

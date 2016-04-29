@@ -1,0 +1,11 @@
+extends ../../template/layout.jade
+
+//- doctype 변경
+append config
+	//- banner 영역 삭제
+	- var banner = false
+
+//- 문서의 제목을 subpage2 의 제목으로 변경
+block title
+	| subpage2
+

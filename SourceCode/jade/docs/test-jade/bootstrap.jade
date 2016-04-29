@@ -1,0 +1,23 @@
+extends ../../template/bootstrap.jade
+
+//- doctype 변경
+append config
+	//- banner 영역 삭제
+	- var banner = false
+
+
+
+//- 문서의 제목을 bootstrap 의 제목으로 변경
+block title
+	| bootstrap
+
+	block header
+		include ../../files/bs-nav.jade
+	block main
+		div.container
+			div.row
+				include ../../files/bootstrap.jade
+		
+		div.container
+			div.row
+				include ../../files/collapse.html

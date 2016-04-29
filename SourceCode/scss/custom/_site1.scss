@@ -1,0 +1,114 @@
+/* 
+---------------------------------------------------------------
+*
+* site1
+*
+---------------------------------------------------------------
+*/
+
+// layout
+.wrapper {
+	width: $wrapper-width;
+	margin: 0 auto;
+	@include clearfix();
+}
+
+.header {
+	padding: 30px;
+	border-bottom: 1px solid #ccc;
+
+	ul {
+		@include clearfix();
+		margin: 0 auto;
+		padding: 0;
+		list-style: none;
+		width: $wrapper-width;
+
+		li {
+			float: left;
+			position: relative;
+			&:first-child a {
+				border-left: 0 none;
+			}
+
+			a {
+				display: block;
+				float: left;
+				background-color: #333;
+				color: #fff;
+				padding: 15px 30px;
+				width: 200px;
+				text-align: center;
+				border-left: 1px solid #999;
+				border-right: 1px solid #000;
+
+				&:hover {
+					background-color: lighten(#333, 10%);
+				}
+			}
+
+			&:hover {
+				ul {
+					display: block;
+				}
+			}
+			ul {
+				position: absolute;
+				top: 49px;
+				left: 2px;
+				width: 200px;
+				display: none;
+				li {
+					float: none;
+					&:first-child a {
+						border-top: 0 none;
+					}
+					a {
+						float: none;
+						border-right: 0 none;
+						border-left: 0 none;
+						border-top: 1px solid #999;
+						width: 199px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.main {
+	@include clearfix();
+	h1 {
+		background: url($img-url+'icon-arrow-right-black.gif') no-repeat left 19px;
+		padding-left: 10px;
+	}
+	.lnb {
+		width: 300px;
+		float: left;
+		min-height: 900px;
+		background-color: #FAD1D1;
+	}
+	.content {
+		float: right;
+		width: 700px;
+	}
+}
+
+
+
+
+.banner {
+	background-color: #f1f1f1;
+	height: 300px;
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
