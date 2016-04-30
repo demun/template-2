@@ -21,7 +21,6 @@ module.exports = function (grunt) {
         jade: {
             dist: {
                 options: {
-                    client: false,
                     pretty: true
                 },
                 files: [
@@ -129,6 +128,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // 파일을 병합합니다.
         concat: {
             options: {
                 // separator: ';',
@@ -157,6 +157,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // 압축합니다.
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -307,7 +308,6 @@ module.exports = function (grunt) {
             // 'clean',
             'sass',
             'postcss',
-            // 'csslint',
             'csscomb',
             'cssmin'
         ]
